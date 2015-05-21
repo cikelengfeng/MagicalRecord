@@ -11,6 +11,16 @@ Pod::Spec.new do |s|
   s.framework    = 'CoreData'
   s.requires_arc = true
 
+  s.subspec "Core" do |sp|
+    sp.framework    = 'CoreData'
+    sp.header_dir   = 'MagicalRecord'
+    sp.source_files = 'MagicalRecord/**/*.{h,m}'
+    sp.prefix_header_contents = <<-EOS
+  #import <CoreData/CoreData.h>
+  #import "MagicalRecord.h"
+  EOS
+  end
+
   def s.post_install(target)
     prefix_header = config.project_pods_root + target.prefix_header_filename
     prefix_header.open('a') do |file|
