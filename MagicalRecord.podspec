@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary  = 'Super Awesome Easy Fetching for Core Data 1!!!11!!!!1!.'
   s.homepage = 'http://github.com/magicalpanda/MagicalRecord'
   s.author   = { 'Saul Mora' => 'saul@magicalpanda.com' }
-  s.source   = { :git => 'https://github.com/magicalpanda/MagicalRecord.git',:branch=>'release/2.2-DELETE_journal_mode' }
+  s.source   = { :git => 'https://github.com/cikelengfeng/MagicalRecord.git',:branch=>'release/2.2-DELETE_journal_mode' }
   s.description  = 'Handy fetching, threading and data import helpers to make Core Data a little easier to use.'
   s.source_files = 'MagicalRecord/**/*.{h,m}'
   s.framework    = 'CoreData'
