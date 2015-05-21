@@ -125,7 +125,8 @@ NSString * const kMagicalRecordPSCDidCompleteiCloudSetupNotification = @"kMagica
 {
     // Adding the journalling mode recommended by apple
     NSMutableDictionary *sqliteOptions = [NSMutableDictionary dictionary];
-    [sqliteOptions setObject:@"WAL" forKey:@"journal_mode"];
+    //MagicalRecord原本使用的日志模式是WAL，但是WAL会产生很多问题，比如轻量迁移时如果空间不足会导致无法打开应用。并且会产生很大的日志文件
+    [sqliteOptions setObject:@"DELETE" forKey:@"journal_mode"];
     
     NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
                              [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
