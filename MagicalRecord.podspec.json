@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/cikelengfeng/MagicalRecord.git",
-    "tag": "2.2-DELETE_jounal_mode"
+    "tag": "release/2.2-DELETE_jounal_mode"
   },
   "description": "Handy fetching, threading and data import helpers to make Core Data a little easier to use.",
   "frameworks": "CoreData",
